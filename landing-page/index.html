@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartBuy: E-Commerce & Smart Arbitrage Browser Extension</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header class="header">
+    <div class="nav-container">
+      <div class="logo-group">
+        <span class="logo-icon">💸</span>
+        <span class="logo-text">SmartBuy</span>
+      </div>
+      <nav class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#how-it-works">How it Works</a>
+        <a href="#compliance">Compliance</a>
+        <a href="privacy.html" class="nav-secondary-btn">Privacy</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-container">
+      <span class="badge">⚡ THE ULTIMATE SHOPPING HELPER</span>
+      <h1 class="hero-title">Shop Smart. Compare Instantly. <span class="gradient-text">Earn Cashback.</span></h1>
+      <p class="hero-desc">SmartBuy is a lightweight browser extension that crawls e-commerce listings in real-time, displays historical price charts, automatically applies verified coupons, and activates sub-affiliate cashback commissions on checkout.</p>
+      
+      <div class="hero-actions">
+        <a href="#" class="btn btn-primary">
+          <span class="btn-icon">🌐</span> Add to Chrome — It's Free
+        </a>
+        <a href="#how-it-works" class="btn btn-outline">See How It Works</a>
+      </div>
+
+      <!-- Mock Browser Frame showcasing Side Panel -->
+      <div class="browser-mockup">
+        <div class="browser-header">
+          <div class="dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+          <div class="address-bar">https://www.flipkart.com/search?q=samsung+s26...</div>
+        </div>
+        <div class="browser-content">
+          <div class="mock-webpage">
+            <div class="mock-sidebar"></div>
+            <div class="mock-product-grid">
+              <div class="mock-item-card">
+                <div class="mock-img">📱</div>
+                <div class="mock-text-line short"></div>
+                <div class="mock-text-line"></div>
+                <div class="mock-price-line"></div>
+              </div>
+            </div>
+          </div>
+          <!-- Injected Side Panel Mock -->
+          <div class="mock-sidepanel">
+            <div class="panel-header">
+              <div class="panel-logo">💸 SmartBuy</div>
+              <div class="panel-status">🟢 Connected to Flipkart</div>
+            </div>
+            <div class="panel-card">
+              <div class="panel-prod-title">Samsung Galaxy S26 Ultra 5G</div>
+              <div class="panel-prod-price">₹1,59,999</div>
+            </div>
+            <div class="panel-card">
+              <div class="panel-section-title">📉 Price History (30 Days)</div>
+              <div class="mock-chart-svg">
+                <svg viewBox="0 0 200 80">
+                  <path d="M 10 70 L 40 65 L 70 50 L 100 68 L 130 30 L 160 35 L 190 20" fill="none" stroke="#14b8a6" stroke-width="2"/>
+                </svg>
+              </div>
+            </div>
+            <div class="panel-card">
+              <div class="panel-section-title">🛍️ Arbitrage Deals</div>
+              <div class="panel-deal-row"><span>Walmart</span><span class="text-green">₹1,47,199</span></div>
+              <div class="panel-deal-row"><span>Amazon</span><span>₹1,53,599</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Grid -->
+  <section id="features" class="features">
+    <div class="section-container">
+      <h2 class="section-title">Smart Features to <span class="gradient-text">Beat E-commerce Inflation</span></h2>
+      <p class="section-desc">Everything you need to automate price comparison and secure discount payouts without tab-juggling.</p>
+      
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">📈</div>
+          <h3>Real-Time Price History</h3>
+          <p>Scans products and plots dynamic 30-day price trends. Easily spot whether you are buying on a markup peak or a discount dip.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">🔄</div>
+          <h3>Smart Arbitrage Deals</h3>
+          <p>Instantly checks pricing across Amazon, Walmart, eBay, and Flipkart. Automatically points you to the cheapest seller in a single click.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">🎟️</div>
+          <h3>Automated Coupon Injection</h3>
+          <p>Never search for coupon codes again. Our automated injection engine tests multiple promotion codes at checkout in seconds.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">⚡</div>
+          <h3>Affiliate Cashback Tracker</h3>
+          <p>Activates sub-affiliate rewards via aggregate networks (Sovrn, Skimlinks). Earn percentage commissions back on verified purchases.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section id="how-it-works" class="how-it-works">
+    <div class="section-container">
+      <h2 class="section-title">Three Steps to <span class="gradient-text">Automated Savings</span></h2>
+      <div class="steps-grid">
+        <div class="step">
+          <div class="step-num">01</div>
+          <h3>Add to Browser</h3>
+          <p>Install the SmartBuy extension in seconds from the Chrome Web Store. Runs securely without background battery drain.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">02</div>
+          <h3>Shop Normally</h3>
+          <p>Browse your favorite sites like Amazon, Walmart, eBay, or Flipkart. The extension scans in the background only when you are on product listings.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">03</div>
+          <h3>Compare & Save</h3>
+          <p>A floating pill warns you of better deals. Click to open the side panel to apply coupons, track trends, and activate cashback.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Compliance Banner -->
+  <section id="compliance" class="compliance">
+    <div class="section-container">
+      <div class="compliance-card">
+        <div class="compliance-header">
+          <span class="compliance-badge">COMPLIANCE REVIEW INFO</span>
+          <h3>Affiliate Network & Publisher Policy Details</h3>
+        </div>
+        <p><strong>Note for Sovrn //Commerce, Skimlinks, and Affiliate Partners:</strong></p>
+        <p>SmartBuy is a browser helper utility designed to provide price alerts, charts, and coupon automation to shoppers. The extension monetizes by generating affiliate sub-tracking parameters (VigLink/Skimlinks/Admitad API nodes) solely in response to direct user click interactions ("Activate Cashback" CTAs inside the side panel or floating pill). No cookies are set silently or injected on page load. The extension complies with the Chrome Web Store User Data Policy, collects only anonymous product metadata (URL, title, price) to query pricing graphs, and includes active disclosures and user opt-outs.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="logo-group">
+          <span class="logo-icon">💸</span>
+          <span class="logo-text">SmartBuy</span>
+        </div>
+        <p>Your automated personal shopping assistant. Smart shopping, arbitrage, and affiliate rewards combined.</p>
+      </div>
+      <div class="footer-right">
+        <div class="footer-links-group">
+          <h4>Legal & Compliance</h4>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 SmartBuy. All rights reserved. Chrome is a trademark of Google LLC. E-commerce brand logos and trademarks belong to their respective owners.</p>
+    </div>
+  </footer>
+</body>
+</html>

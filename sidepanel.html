@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartBuy Panel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="sidepanel.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Header -->
+    <header class="header">
+      <div class="logo-area">
+        <div class="logo-icon-spin">💸</div>
+        <div class="brand">
+          <h1>SmartBuy</h1>
+          <span class="tagline">Smart Arbitrage & Cash</span>
+        </div>
+      </div>
+      <div class="status-indicator">
+        <span class="pulse-dot grey" id="status-dot"></span>
+        <span class="status-text" id="status-text">Scanning for products...</span>
+      </div>
+    </header>
+
+    <!-- Empty State -->
+    <div class="empty-state" id="empty-state">
+      <div class="empty-icon">🔍</div>
+      <h3>No Product Detected</h3>
+      <p>Navigate to a product page on Amazon, Walmart, eBay, or Flipkart to see real-time price history, coupons, and arbitrage comparisons.</p>
+    </div>
+
+    <!-- Active State (Hidden by default) -->
+    <main class="main-content hidden" id="active-state">
+      <!-- Product Details Card -->
+      <section class="card product-card">
+        <div class="product-header">
+          <div class="img-wrapper">
+            <img id="product-img" src="" alt="Product Image">
+          </div>
+          <div class="product-info">
+            <span class="store-badge" id="product-store">Amazon</span>
+            <h2 id="product-title">Loading Product Details...</h2>
+            <div class="price-row">
+              <span class="price-label">Current:</span>
+              <span class="product-price" id="product-price">--</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Cashback Affiliate Activation -->
+      <section class="card cashback-card">
+        <div class="cashback-header">
+          <div class="card-title-icon">⚡</div>
+          <h3>Affiliate Cashback</h3>
+          <span class="percent-badge" id="cashback-rate">4.5% rate</span>
+        </div>
+        <p class="cashback-desc">Activating redirects through aggregate affiliate networks (Sovrn/Skimlinks) to reward you on checkout.</p>
+        
+        <button class="btn btn-primary" id="btn-activate-cashback">
+          <span class="btn-text">Activate Cashback</span>
+          <span class="btn-loading hidden">Generating Redirect...</span>
+        </button>
+
+        <div class="affiliate-status hidden" id="affiliate-status-box">
+          <div class="status-row">
+            <span>Tracking Status:</span>
+            <span class="active-status-tag">ACTIVE</span>
+          </div>
+          <div class="status-row font-mono">
+            <span>Sub-Affiliate ID:</span>
+            <span id="sub-affiliate-id">sb_xxxxxxx</span>
+          </div>
+          <div class="progress-bar-container">
+            <div class="progress-bar" id="affiliate-progress"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Price History Analytics -->
+      <section class="card analytics-card">
+        <div class="card-header">
+          <div class="card-title-icon">📈</div>
+          <h3>Price History (30 Days)</h3>
+        </div>
+        
+        <div class="price-stats-grid">
+          <div class="stat-box">
+            <span class="stat-label">Lowest</span>
+            <span class="stat-value text-green" id="price-lowest">--</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-label">Highest</span>
+            <span class="stat-value text-red" id="price-highest">--</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-label">Average</span>
+            <span class="stat-value" id="price-average">--</span>
+          </div>
+        </div>
+
+        <div class="chart-container">
+          <!-- Custom SVG price trend chart -->
+          <svg class="price-chart" id="price-chart" viewBox="0 0 320 160">
+            <defs>
+              <linearGradient id="chart-glow" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="var(--accent-teal)" stop-opacity="0.4"/>
+                <stop offset="100%" stop-color="var(--accent-teal)" stop-opacity="0.0"/>
+              </linearGradient>
+            </defs>
+            <!-- Grid Lines & Paths will be drawn here dynamically -->
+          </svg>
+          <div class="chart-tooltip hidden" id="chart-tooltip"></div>
+        </div>
+      </section>
+
+      <!-- Smart Arbitrage Comparison -->
+      <section class="card arbitrage-card">
+        <div class="card-header">
+          <div class="card-title-icon">🔄</div>
+          <h3>Smart Arbitrage Deals</h3>
+        </div>
+        <p class="section-desc">Comparing prices across major competing marketplaces.</p>
+        
+        <div class="deals-list" id="deals-list">
+          <!-- Deals injected dynamically -->
+        </div>
+      </section>
+
+      <!-- Coupon Automation -->
+      <section class="card coupon-card">
+        <div class="card-header">
+          <div class="card-title-icon">🎟️</div>
+          <h3>Auto Coupons</h3>
+          <span class="coupon-count-badge" id="coupon-count">0 found</span>
+        </div>
+        <p class="section-desc">Test and apply multiple coupon codes automatically at checkout.</p>
+        
+        <button class="btn btn-secondary" id="btn-apply-coupons">Auto-Apply Coupons</button>
+        
+        <div class="coupon-console hidden" id="coupon-console">
+          <div class="console-header">
+            <span>Automation Engine Console</span>
+            <span class="console-status" id="console-status">Ready</span>
+          </div>
+          <div class="console-body" id="console-logs">
+            <!-- Automation logs injected here -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Developer Monetization Console -->
+      <section class="card monetization-card">
+        <div class="card-header">
+          <div class="card-title-icon">⚙️</div>
+          <h3>Monetization Analytics</h3>
+        </div>
+        <p class="section-desc">Behind the scenes: simulated performance yield of this extension.</p>
+        
+        <div class="monetization-grid">
+          <div class="mon-stat">
+            <span class="mon-label">Extension Users</span>
+            <span class="mon-val">102.4K</span>
+          </div>
+          <div class="mon-stat">
+            <span class="mon-label">User Conversions</span>
+            <span class="mon-val">5.1%</span>
+          </div>
+          <div class="mon-stat">
+            <span class="mon-label">Avg Commission</span>
+            <span class="mon-val">4.50%</span>
+          </div>
+          <div class="mon-stat">
+            <span class="mon-label">Dev Revenue</span>
+            <span class="mon-val text-neon">$11,520/mo</span>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  
+  <script src="sidepanel.js"></script>
+</body>
+</html>

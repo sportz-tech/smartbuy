@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - SmartBuy Extension</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .legal-content {
+      padding: 60px 0;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .legal-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 40px;
+      backdrop-filter: blur(12px);
+    }
+    .legal-card h1 {
+      font-family: var(--font-title);
+      font-size: 32px;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+    .last-updated {
+      font-size: 12px;
+      color: var(--accent-teal);
+      margin-bottom: 24px;
+      font-weight: 600;
+    }
+    .legal-card h2 {
+      font-family: var(--font-title);
+      font-size: 20px;
+      color: #fff;
+      margin-top: 32px;
+      margin-bottom: 12px;
+    }
+    .legal-card p, .legal-card li {
+      font-size: 14px;
+      color: var(--text-gray);
+      margin-bottom: 16px;
+      line-height: 1.6;
+    }
+    .legal-card ul {
+      margin-left: 20px;
+      margin-bottom: 16px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header class="header">
+    <div class="nav-container">
+      <div class="logo-group" onclick="window.location.href='index.html'">
+        <span class="logo-icon">💸</span>
+        <span class="logo-text">SmartBuy</span>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#features">Features</a>
+        <a href="index.html#how-it-works">How it Works</a>
+        <a href="terms.html" class="nav-secondary-btn">Terms</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Legal Content -->
+  <div class="legal-content">
+    <div class="nav-container">
+      <div class="legal-card">
+        <h1>Privacy Policy</h1>
+        <div class="last-updated">Last Updated: June 10, 2026</div>
+
+        <p>SmartBuy ("we", "our", or "us") operates the SmartBuy Chrome Extension (the "Extension"). We are committed to protecting the privacy of our users. This Privacy Policy explains what information we collect, how we use it, and how we keep it safe when you use our Extension.</p>
+
+        <h2>1. Information We Collect</h2>
+        <p>SmartBuy is designed to be fully privacy-compliant. We do not collect any Personally Identifiable Information (PII) such as your name, email address, physical address, phone number, or payment details. The only information processed by the Extension includes:</p>
+        <ul>
+          <li><strong>E-commerce Product Metadata:</strong> The title, price, image URL, and product identifier (such as ASIN or Item ID) of product pages you browse on supported websites (Amazon, Walmart, eBay, and Flipkart). This metadata is processed to query historical price charts and search for cheaper alternative sellers.</li>
+          <li><strong>Anonymized URLs:</strong> Page URLs of supported e-commerce sites are analyzed locally to trigger the floating price badge helper and comparison panels.</li>
+        </ul>
+
+        <h2>2. Data Collection Purpose</h2>
+        <p>The metadata collected is processed solely for the following purposes:</p>
+        <ul>
+          <li>To display price history trends and arbitrage deal tables inside the Extension's Side Panel.</li>
+          <li>To test and apply active coupon codes automatically at checkout.</li>
+          <li>To generate sub-affiliate redirect rewards on verified checkout transactions.</li>
+        </ul>
+
+        <h2>3. Monetization & Sub-Affiliate Network Policy</h2>
+        <p>The Extension monetizes user clicks by utilizing sub-affiliate marketing aggregators (such as Sovrn //Commerce, Skimlinks, and Admitad). When you explicitly click "Activate Cashback" or open arbitrage comparison links, the Extension generates a sub-affiliate redirection URL. If you complete a purchase, the merchant pays a commission which is shared with us. No affiliate cookies are set silently or automatically on page load; they are only set in response to direct user click gestures.</p>
+
+        <h2>4. Data Sharing & Third Parties</h2>
+        <p>We do not sell, trade, or rent any user data to third parties. Product metadata is transmitted securely to our backend server to retrieve pricing analytics. All communications between the Extension and the API server are encrypted via Secure Sockets Layer (SSL/TLS).</p>
+
+        <h2>5. Your Choices & Opt-Out</h2>
+        <p>You can control the Extension's behavior at any time. If you wish to stop the Extension from scanning listing details, you can disable the Extension directly in your browser's extensions panel (`chrome://extensions/`) or uninstall it. Disabling the Extension immediately stops all content script injections and background requests.</p>
+
+        <h2>6. Changes to this Policy</h2>
+        <p>We reserve the right to modify this Privacy Policy at any time. Any changes will be posted on this page with an updated "Last Updated" date. We encourage you to review this page periodically to stay informed about our data handling practices.</p>
+
+        <h2>7. Contact Us</h2>
+        <p>If you have any questions or feedback regarding this Privacy Policy, please contact us at compliance@smartbuy-extension.com.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="logo-group" onclick="window.location.href='index.html'">
+          <span class="logo-icon">💸</span>
+          <span class="logo-text">SmartBuy</span>
+        </div>
+        <p>Your automated personal shopping assistant. Smart shopping, arbitrage, and affiliate rewards combined.</p>
+      </div>
+      <div class="footer-right">
+        <div class="footer-links-group">
+          <h4>Legal & Compliance</h4>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 SmartBuy. All rights reserved. Chrome is a trademark of Google LLC. E-commerce brand logos and trademarks belong to their respective owners.</p>
+    </div>
+  </footer>
+</body>
+</html>
